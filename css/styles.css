@@ -1,0 +1,25 @@
+@font-face {
+    font-family: Clementine;
+    src: url(../fonts/clementine.otf);
+  }
+  
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway-Regular.ttf);
+  }
+  
+/* RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    line-height: normal;
+  }
+
+  /* MAIN */
+
+.title {
+    font-family: Clementine;
+    font-size: 24pt;
+}
