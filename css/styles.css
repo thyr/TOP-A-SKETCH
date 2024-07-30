@@ -1,25 +1,80 @@
 @font-face {
-    font-family: Clementine;
-    src: url(../fonts/clementine.otf);
-  }
-  
+  font-family: Clementine;
+  src: url(../fonts/clementine.otf);
+}
+
 @font-face {
-    font-family: Raleway;
-    src: url(../fonts/Raleway-Regular.ttf);
-  }
-  
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+
 /* RESETS */
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    line-height: normal;
-  }
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  line-height: normal;
+  color: #333;
+}
 
-  /* MAIN */
+/* MAIN */
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #eee;
+}
+
+#header {
+  height: 5%;
+  padding: 16px 16px;
+  display: flex;
+  align-items: center;
+}
+
+#main {
+  display: flex;
+  flex: 1;
+}
+
+#etch-config {
+  width: 15%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 16px;
+}
+
+#etch-main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#etch-container {
+  margin: auto;
+  align-self: center;
+  display: flex;
+  flex-flow: row wrap;
+  width: 75vh;
+  height: 75vh;
+}
+
+#footer {}
 
 .title {
-    font-family: Clementine;
-    font-size: 24pt;
+  font-family: Clementine;
+  font-size: 24pt;
+}
+
+.tile {
+  border: 1px solid #444;
+  min-width: 16px;
+  min-height: 16px;
+  flex: 1 0 12%;
 }

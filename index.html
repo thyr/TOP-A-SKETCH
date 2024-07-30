@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch!</title>
     <script src="./etch.js" defer></script>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <div id="header"><p class="title">Etch-a-Sketch!</p></div>
-    <div id="etch-config"></div>
-    <div id="etch-containerr"></div>
+    <div id="main">
+      <div id="etch-config">
+        <p>Number of tiles:</p>
+        <button id="grid-draw-32">32</button>
+        <button id="grid-draw-64">64</button>
+        <button id="grid-draw-128">128</button>
+        <button id="grid-draw-256">256</button>
+      </div>
+      <div id="etch-main">
+        <div id="etch-container"></div>
+      </div>
+    </div>
+    <div id="footer">
+      Maybe A Replicant <br />
+      https://github.com/thyr <br />
+      dan990ov@gmail.com
+    </div>
   </body>
 </html>
