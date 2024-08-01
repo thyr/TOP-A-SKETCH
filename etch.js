@@ -6,6 +6,27 @@ const divGrid = document.getElementById("etch-container"),
   btnDraw16 = document.getElementById("grid-draw-16"),
   btnDraw32 = document.getElementById("grid-draw-32");
 
+// Color randomizer
+function rg(m, n) {
+  return Math.floor(Math.random() * (n - m + 1)) + m;
+}
+
+function hex(i) {
+  return i.toString(16);
+}
+
+function randColor() {
+  return (
+    "#" +
+    hex(rg(1, 15)) +
+    hex(rg(1, 15)) +
+    hex(rg(1, 15)) +
+    hex(rg(1, 15)) +
+    hex(rg(1, 15)) +
+    hex(rg(1, 15))
+  );
+}
+
 // Grid generator
 let gridTileN, gridTileX, gridTileY;
 
@@ -16,13 +37,7 @@ function drawGrid(gridTileN) {
     divGrid.removeChild(existingTile);
     existingTile = divGrid.lastElementChild;
   }
-  // OLD METHOD (Generates bulk tiles, not minding horizontal nor vertical)
-  // // Now we generate the grid
-  // for (let drawn = 0; drawn < gridTileN; drawn++) {
-  //   gridTile = document.createElement("div");
-  //   gridTile.classList.add("tile");
-  //   divGrid.appendChild(gridTile);
-  // }
+
   for (let drawnX = 0; drawnX < gridTileN; drawnX++) {
     gridTileX = document.createElement("div");
     gridTileX.classList.add("tile-x");
@@ -30,6 +45,9 @@ function drawGrid(gridTileN) {
     for (let drawnY = 0; drawnY < gridTileN; drawnY++) {
       gridTileY = document.createElement("div");
       gridTileY.classList.add("tile-y");
+      gridTileY.addEventListener("mouseover", function () {
+        this.style.cssText = `background: ${randColor()};`;
+      });
       gridTileX.appendChild(gridTileY);
     }
   }

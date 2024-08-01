@@ -60,12 +60,18 @@ body {
   margin: auto;
   align-self: center;
   display: flex;
-  flex-flow: row wrap;
-  width: 75vh;
-  height: 75vh;
+  flex-flow: row nowrap;
+  height: 85vh;
+  width: 85vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-#footer {}
+#footer {
+  padding-bottom: 16px;
+  padding-left: 16px;
+}
 
 .title {
   font-family: Clementine;
@@ -73,15 +79,22 @@ body {
 }
 
 .tile-x {
-  border: 1px solid #444;
-  min-width: 16px;
-  min-height: 16px;
-  flex: 1 0 12%;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 100%;
+  min-width: max-content;
+  align-items: flex-start;
+  height: 100%;
 }
 
 .tile-y {
-  border: 1px solid #444;
-  min-width: 16px;
-  min-height: 16px;
-  flex: 1 0 12%;
+  border: 1px dotted #444;
+  width: 100%;
+  flex: 1 1 100%;
+}
+
+.tile-y:after {
+  content: "";
+  display: block;
+  padding-right: 100%;
 }
